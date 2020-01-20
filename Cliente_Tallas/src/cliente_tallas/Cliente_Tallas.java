@@ -18,10 +18,12 @@ public class Cliente_Tallas {
        int t1 = Integer.parseInt(Menu);
        do{
        if(t1==1){
-           tallasConversor("mateo");
+           String talla1=JOptionPane.showInputDialog("Ingresa la talla(Ingresa Mayusculas)");
+           tallasConversor(talla1);
        }
        if(t1==2){
-           conversorNumeros("mateo");
+           String talla1=JOptionPane.showInputDialog("Ingresa la talla(Solo ingresa numeros)");
+           conversorNumeros(talla1);
        }
        if(t1==3){
            JOptionPane.showMessageDialog(null,"ADIOS :V");
