@@ -25,11 +25,11 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _HelloResponse_QNAME = new QName("http://UDDI/", "helloResponse");
-    private final static QName _TallasConversorResponse_QNAME = new QName("http://UDDI/", "tallas_conversorResponse");
-    private final static QName _ConversorNumerosResponse_QNAME = new QName("http://UDDI/", "conversor_numerosResponse");
-    private final static QName _TallasConversor_QNAME = new QName("http://UDDI/", "tallas_conversor");
-    private final static QName _ConversorNumeros_QNAME = new QName("http://UDDI/", "conversor_numeros");
+    private final static QName _ConversorZapatos_QNAME = new QName("http://UDDI/", "conversor_zapatos");
+    private final static QName _ConversorRopa_QNAME = new QName("http://UDDI/", "conversor_ropa");
+    private final static QName _ConversorRopaResponse_QNAME = new QName("http://UDDI/", "conversor_ropaResponse");
     private final static QName _Hello_QNAME = new QName("http://UDDI/", "hello");
+    private final static QName _ConversorZapatosResponse_QNAME = new QName("http://UDDI/", "conversor_zapatosResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: uddi
@@ -39,11 +39,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConversorNumerosResponse }
+     * Create an instance of {@link ConversorRopa }
      * 
      */
-    public ConversorNumerosResponse createConversorNumerosResponse() {
-        return new ConversorNumerosResponse();
+    public ConversorRopa createConversorRopa() {
+        return new ConversorRopa();
+    }
+
+    /**
+     * Create an instance of {@link ConversorZapatos }
+     * 
+     */
+    public ConversorZapatos createConversorZapatos() {
+        return new ConversorZapatos();
     }
 
     /**
@@ -55,11 +63,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link TallasConversorResponse }
+     * Create an instance of {@link ConversorZapatosResponse }
      * 
      */
-    public TallasConversorResponse createTallasConversorResponse() {
-        return new TallasConversorResponse();
+    public ConversorZapatosResponse createConversorZapatosResponse() {
+        return new ConversorZapatosResponse();
+    }
+
+    /**
+     * Create an instance of {@link ConversorRopaResponse }
+     * 
+     */
+    public ConversorRopaResponse createConversorRopaResponse() {
+        return new ConversorRopaResponse();
     }
 
     /**
@@ -68,22 +84,6 @@ public class ObjectFactory {
      */
     public Hello createHello() {
         return new Hello();
-    }
-
-    /**
-     * Create an instance of {@link ConversorNumeros }
-     * 
-     */
-    public ConversorNumeros createConversorNumeros() {
-        return new ConversorNumeros();
-    }
-
-    /**
-     * Create an instance of {@link TallasConversor }
-     * 
-     */
-    public TallasConversor createTallasConversor() {
-        return new TallasConversor();
     }
 
     /**
@@ -96,39 +96,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TallasConversorResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorZapatos }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://UDDI/", name = "tallas_conversorResponse")
-    public JAXBElement<TallasConversorResponse> createTallasConversorResponse(TallasConversorResponse value) {
-        return new JAXBElement<TallasConversorResponse>(_TallasConversorResponse_QNAME, TallasConversorResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_zapatos")
+    public JAXBElement<ConversorZapatos> createConversorZapatos(ConversorZapatos value) {
+        return new JAXBElement<ConversorZapatos>(_ConversorZapatos_QNAME, ConversorZapatos.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorNumerosResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorRopa }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_numerosResponse")
-    public JAXBElement<ConversorNumerosResponse> createConversorNumerosResponse(ConversorNumerosResponse value) {
-        return new JAXBElement<ConversorNumerosResponse>(_ConversorNumerosResponse_QNAME, ConversorNumerosResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_ropa")
+    public JAXBElement<ConversorRopa> createConversorRopa(ConversorRopa value) {
+        return new JAXBElement<ConversorRopa>(_ConversorRopa_QNAME, ConversorRopa.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link TallasConversor }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorRopaResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://UDDI/", name = "tallas_conversor")
-    public JAXBElement<TallasConversor> createTallasConversor(TallasConversor value) {
-        return new JAXBElement<TallasConversor>(_TallasConversor_QNAME, TallasConversor.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorNumeros }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_numeros")
-    public JAXBElement<ConversorNumeros> createConversorNumeros(ConversorNumeros value) {
-        return new JAXBElement<ConversorNumeros>(_ConversorNumeros_QNAME, ConversorNumeros.class, null, value);
+    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_ropaResponse")
+    public JAXBElement<ConversorRopaResponse> createConversorRopaResponse(ConversorRopaResponse value) {
+        return new JAXBElement<ConversorRopaResponse>(_ConversorRopaResponse_QNAME, ConversorRopaResponse.class, null, value);
     }
 
     /**
@@ -138,6 +129,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://UDDI/", name = "hello")
     public JAXBElement<Hello> createHello(Hello value) {
         return new JAXBElement<Hello>(_Hello_QNAME, Hello.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConversorZapatosResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://UDDI/", name = "conversor_zapatosResponse")
+    public JAXBElement<ConversorZapatosResponse> createConversorZapatosResponse(ConversorZapatosResponse value) {
+        return new JAXBElement<ConversorZapatosResponse>(_ConversorZapatosResponse_QNAME, ConversorZapatosResponse.class, null, value);
     }
 
 }

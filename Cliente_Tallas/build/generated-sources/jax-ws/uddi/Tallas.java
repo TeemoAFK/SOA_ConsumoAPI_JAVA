@@ -26,6 +26,21 @@ public interface Tallas {
 
     /**
      * 
+     * @param talla
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "conversor_ropa")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "conversor_ropa", targetNamespace = "http://UDDI/", className = "uddi.ConversorRopa")
+    @ResponseWrapper(localName = "conversor_ropaResponse", targetNamespace = "http://UDDI/", className = "uddi.ConversorRopaResponse")
+    @Action(input = "http://UDDI/Tallas/conversor_ropaRequest", output = "http://UDDI/Tallas/conversor_ropaResponse")
+    public String conversorRopa(
+        @WebParam(name = "talla", targetNamespace = "")
+        String talla);
+
+    /**
+     * 
      * @param name
      * @return
      *     returns java.lang.String
@@ -45,27 +60,12 @@ public interface Tallas {
      * @return
      *     returns java.lang.String
      */
-    @WebMethod(operationName = "tallas_conversor")
+    @WebMethod(operationName = "conversor_zapatos")
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "tallas_conversor", targetNamespace = "http://UDDI/", className = "uddi.TallasConversor")
-    @ResponseWrapper(localName = "tallas_conversorResponse", targetNamespace = "http://UDDI/", className = "uddi.TallasConversorResponse")
-    @Action(input = "http://UDDI/Tallas/tallas_conversorRequest", output = "http://UDDI/Tallas/tallas_conversorResponse")
-    public String tallasConversor(
-        @WebParam(name = "talla", targetNamespace = "")
-        String talla);
-
-    /**
-     * 
-     * @param talla
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod(operationName = "conversor_numeros")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "conversor_numeros", targetNamespace = "http://UDDI/", className = "uddi.ConversorNumeros")
-    @ResponseWrapper(localName = "conversor_numerosResponse", targetNamespace = "http://UDDI/", className = "uddi.ConversorNumerosResponse")
-    @Action(input = "http://UDDI/Tallas/conversor_numerosRequest", output = "http://UDDI/Tallas/conversor_numerosResponse")
-    public String conversorNumeros(
+    @RequestWrapper(localName = "conversor_zapatos", targetNamespace = "http://UDDI/", className = "uddi.ConversorZapatos")
+    @ResponseWrapper(localName = "conversor_zapatosResponse", targetNamespace = "http://UDDI/", className = "uddi.ConversorZapatosResponse")
+    @Action(input = "http://UDDI/Tallas/conversor_zapatosRequest", output = "http://UDDI/Tallas/conversor_zapatosResponse")
+    public String conversorZapatos(
         @WebParam(name = "talla", targetNamespace = "")
         String talla);
 

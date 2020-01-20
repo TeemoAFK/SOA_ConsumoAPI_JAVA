@@ -24,64 +24,62 @@ public class Tallas {
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
     }
-    
-    /**
+     /**
      * This is a sample web service operation
      */
-    @WebMethod(operationName = "tallas_conversor")
-    public void Tallas_conversor(@WebParam(name = "talla") String talla) {
-        //talla = JOptionPane.showInputDialog("Ingrese la talla(Solo ingresar mayusculas)");
-        if(talla=="XS"){
-           JOptionPane.showMessageDialog(null, "USA=2,UK=4,EU/LATAM=32,JPN=5");
-        }
-        if(talla=="S"){
-            JOptionPane.showMessageDialog(null, "USA=6,UK=8,EU/LATAM=36,JPN=9");
-        }
-        if(talla=="M"){
-            JOptionPane.showMessageDialog(null, "USA=10,UK=12,EU/LATAM=40,JPN=13");
-        }
-        if(talla=="L"){
-            JOptionPane.showMessageDialog(null, "USA=14,UK=16,EU/LATAM=44,JPN=17");
-        }
-        if(talla=="XL"){
-            JOptionPane.showMessageDialog(null, "USA=18,UK=20,EU/LATAM=48,JPN=21");
-        }
-        if(talla=="XXL"){
-            JOptionPane.showMessageDialog(null, "USA=22,UK=24,EU/LATAM=52,JPN=25");
-        
-        }else{
-            JOptionPane.showMessageDialog(null, "Ingrese una talla correcta");
-        } 
-    }
-    
-    /**
-     * This is a sample web service operation
-     */
-    @WebMethod(operationName = "conversor_numeros")
-    public void conversor_numeros(@WebParam(name = "talla") String talla) {
+    @WebMethod(operationName = "conversor_ropa")
+    public String conversor_numeros(@WebParam(name = "talla") String talla) {
         int t1 = Integer.parseInt(talla);
         if(t1>=32 && t1<=35){
-           JOptionPane.showMessageDialog(null, "USA=2,UK=4,GLOBAL=XS,JPN=5");
+           talla = "USA=2,UK=4,GLOBAL=XS,JPN=5";
         }
         if(t1>=36 && t1<=39){
-            JOptionPane.showMessageDialog(null, "USA=6,UK=8,GLOBAL=S,JPN=9");
+            talla = "USA=6,UK=8,GLOBAL=S,JPN=9";
         }
         if(t1>=40 && t1<=43){
-            JOptionPane.showMessageDialog(null, "USA=10,UK=12,GLOBAL=M,JPN=13");
+            talla = "USA=10,UK=12,GLOBAL=M,JPN=13";
         }
         if(t1>=44 && t1<=47){
-            JOptionPane.showMessageDialog(null, "USA=14,UK=16,GLOBAL=L,JPN=17");
+            talla = "USA=14,UK=16,GLOBAL=L,JPN=17";
         }
         if(t1>=48 && t1<=51){
-            JOptionPane.showMessageDialog(null, "USA=18,UK=20,GLOBAL=XL,JPN=21");
+            talla = "USA=18,UK=20,GLOBAL=XL,JPN=21";
         }
         if(t1==52){
-            JOptionPane.showMessageDialog(null, "USA=22,UK=24,GLOBAL=XXL,JPN=25");
+            talla = "USA=22,UK=24,GLOBAL=XXL,JPN=25";
         
         }else if(t1<32||t1>52){
-            JOptionPane.showMessageDialog(null, "Ingrese una talla correcta");
+            talla = "Ingrese una talla correcta";
         } 
-        
+        return talla;
     }
     
+    @WebMethod(operationName = "conversor_zapatos")
+    public String conversor_zapatos(@WebParam(name = "talla") String talla) {
+        int t1 = Integer.parseInt(talla);
+        if(t1>=32 && t1<=35){
+           talla = "USA=2,UK=4,GLOBAL=XS,JPN=5";
+        }
+        if(t1>=36 && t1<=39){
+            talla = "USA=6,UK=8,GLOBAL=S,JPN=9";
+        }
+        if(t1>=40 && t1<=43){
+            talla = "USA=10,UK=12,GLOBAL=M,JPN=13";
+        }
+        if(t1>=44 && t1<=47){
+            talla = "USA=14,UK=16,GLOBAL=L,JPN=17";
+        }
+        if(t1>=48 && t1<=51){
+            talla = "USA=18,UK=20,GLOBAL=XL,JPN=21";
+        }
+        if(t1==52){
+            talla = "USA=22,UK=24,GLOBAL=XXL,JPN=25";
+        
+        }else if(t1<32||t1>52){
+            talla = "Ingrese una talla correcta";
+        } 
+        return talla;
+    }
+    
+      
 }
