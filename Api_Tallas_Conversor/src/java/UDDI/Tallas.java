@@ -31,24 +31,24 @@ public class Tallas {
     public String conversor_numeros(@WebParam(name = "talla") String talla) {
         int t1 = Integer.parseInt(talla);
         if(t1>=32 && t1<=35){
-           talla = "USA=2,UK=4,GLOBAL=XS,JPN=5";
+           talla = "\nUSA=2\nUK=4\nGLOBAL=XS\nJPN=5";
         }
         if(t1>=36 && t1<=39){
-            talla = "USA=6,UK=8,GLOBAL=S,JPN=9";
+            talla = "\nUSA=6\nUK=8\nGLOBAL=S\nJPN=9";
         }
         if(t1>=40 && t1<=43){
-            talla = "USA=10,UK=12,GLOBAL=M,JPN=13";
+            talla = "\nUSA=10\nUK=12\nGLOBAL=M\nJPN=13";
         }
         if(t1>=44 && t1<=47){
-            talla = "USA=14,UK=16,GLOBAL=L,JPN=17";
+            talla = "\nUSA=14\nUK=16\nGLOBAL=L\nJPN=17";
         }
         if(t1>=48 && t1<=51){
-            talla = "USA=18,UK=20,GLOBAL=XL,JPN=21";
+            talla = "\nUSA=18\nUK=20\nGLOBAL=XL\nJPN=21";
         }
         if(t1==52){
-            talla = "USA=22,UK=24,GLOBAL=XXL,JPN=25";
+            talla = "\nUSA=22\nUK=24\nGLOBAL=XXL\nJPN=25";
         
-        }else if(t1<32||t1>52){
+        }else if(t1>52){
             talla = "Ingrese una talla correcta";
         } 
         return talla;
@@ -57,25 +57,34 @@ public class Tallas {
     @WebMethod(operationName = "conversor_zapatos")
     public String conversor_zapatos(@WebParam(name = "talla") String talla) {
         int t1 = Integer.parseInt(talla);
-        if(t1>=32 && t1<=35){
-           talla = "USA=2,UK=4,GLOBAL=XS,JPN=5";
+        if(t1<=35){
+           talla = "\nUSA=5.5\nUK=3\nEUROPA=36\ncm=22.5";
         }
-        if(t1>=36 && t1<=39){
-            talla = "USA=6,UK=8,GLOBAL=S,JPN=9";
+        if(t1<=36){
+            talla = "\nUSA=6\nUK=3.5\nEUROPA=37\ncm=23.5";
         }
-        if(t1>=40 && t1<=43){
-            talla = "USA=10,UK=12,GLOBAL=M,JPN=13";
+        if(t1>=37){
+            talla = "\nUSA=7\nUK=4.5\nEUROPA=38\ncm=24";
         }
-        if(t1>=44 && t1<=47){
-            talla = "USA=14,UK=16,GLOBAL=L,JPN=17";
+        if(t1>=38){
+            talla = "\nUSA=7.5\nUK=5.5\nEUROPA=39\ncm=25";
         }
-        if(t1>=48 && t1<=51){
-            talla = "USA=18,UK=20,GLOBAL=XL,JPN=21";
+        if(t1>=39){
+            talla = "\nUSA=8\nUK=6.5\nEUROPA=40\ncm=26";
         }
-        if(t1==52){
-            talla = "USA=22,UK=24,GLOBAL=XXL,JPN=25";
-        
-        }else if(t1<32||t1>52){
+        if(t1==40){
+            talla = "\nUSA=8.5\nUK=7.5\nEUROPA=41\ncm=27";
+        }
+        if(t1>=41){
+            talla = "\nUSA=9.5\nUK=8.5\nEUROPA=42\ncm=27.5";
+        }
+        if(t1>=42){
+            talla = "\nUSA=10\nUK=9\nEUROPA=43\ncm=28";
+        }
+        if(t1>=43){
+            talla = "\nUSA=11\nUK=10\nEUROPA=44\ncm=29";
+        }
+        else if(t1>52){
             talla = "Ingrese una talla correcta";
         } 
         return talla;
